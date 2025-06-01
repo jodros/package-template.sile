@@ -1,3 +1,5 @@
+
+rockspec_format = "3.0"
 package = "package-template.sile"
 version = "dev-1"
 
@@ -10,11 +12,14 @@ description = {
 }
 
 source = {
-  url = "", -- a clonable repository link
+  url = "git+https://github.com/user/package.sile.git", -- it should have the git+https: prefix in order to work in this case!
   -- tag = ""
 }
 
-dependencies = {}
+dependencies = {
+   "lua >= 5.1",
+}
+
 build = {
   type = "builtin",
 

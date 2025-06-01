@@ -8,13 +8,14 @@ function package:_init()
 end
 
 function package:registerCommands()
-  self:registerCommand("package-command", function(_, _)
+  self:registerCommand("sample-command", function(_, content)
+      SILE.process(content)
   end)
 end
 
 package.documentation = [[
 \begin{document}
-\autodoc:package{}
+The \autodoc:package{template} package provides the command \autodoc:command{\package-command{sample-command}}, which does nothing but print what is written within the brackets...
 \end{document}
 ]]
 
